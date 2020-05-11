@@ -62,7 +62,8 @@ console.log("pænt: " + test(28, 28));
 
 
 // Opgave 12 - MEGET GRIMT
-let arr2 = [78, 95];
+
+/*let arr2 = [78, 95];
 let arr3 = [20, 30];
 let arr4 = [21, 25];
 let arr5 = [28, 28];
@@ -121,8 +122,21 @@ if(arr5[0]>=20 && arr5[0] <=30 && arr5[1] >=20 && arr5[1] <=30){
     console.log(arr5[1]);
 }else{
     console.log(0);
+}*/
+
+
+//Opgave 3
+function check(a, b){
+    var sum = a + b;
+
+    if(sum === 30 || a === 30 || b === 30){
+        return true;
+    }else{
+        return false;
+    }
 }
+console.log(check(5, 25));
 
 
 
-
+//Opgave 4
