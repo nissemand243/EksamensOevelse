@@ -238,3 +238,38 @@ for(let i = 0; i < 70; i += 15){
     }
 }
 console.log(arr6);
+
+
+
+//Opgave 10 - fint nærmeste nummer til værdien 100, er de ens returner 0
+arr8 = [];
+function check5 (a, b){
+    
+
+    var differ1 = 100 - a;
+    var differ2 = 100 - b;
+
+    if(differ1 === differ2){
+        return 0;
+    }
+    if(differ1 < 0){
+        differ1 *= -1;
+    }
+    if(differ2 < 0){
+        differ2 *= -1;
+    }
+
+    if(differ1 < differ2){
+        return a;
+    }else{
+        return b;
+    }
+}
+
+for(let i = 0; i < 200; i+= 40){
+    for(let j = 0; j < 200; j += 40){
+        //console.log(i, j, check3(i, j));
+        arr8.push(check5(i, j));
+    }
+}
+console.log(arr8);
