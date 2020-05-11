@@ -1,4 +1,5 @@
 //selvstændigt lort
+/*
 var sum = 0;
 for(var x = 0; x < 1000; x++){
     if(x % 3 === 0 || x % 5 ===0){
@@ -6,8 +7,10 @@ for(var x = 0; x < 1000; x++){
     }
 }
 console.log(sum);
+*/
 
 //selvstændigt lort
+/*
 var x;
 var y;
 var chr="";
@@ -19,21 +22,7 @@ for (x = 1; x<=6; x++){
     console.log(chr);
     chr="";
 }
-
-//opgave 5 - ikke lavet færdig
-var result = [];
-var arr = [3, 12, 14, 37];
-
-for(var i = 0; i < arr.length; i++){
-    if(arr[i] % 3 === 0 || arr[i] % 7 === 0){
-        result.push(1);
-    }else{
-        result.push(0);
-    }
-}
-console.log(result);
-
-
+*/
 
 
 //Opgave 12 - pæn løsning
@@ -140,6 +129,7 @@ console.log(check(5, 25));
 
 
 //Opgave 4 - returner true hvis den givne integer er 10 større eller mindre end enten 100 eller 200
+// Løsning 1
 
 function withIn(a){
     var diff = 100 - a;
@@ -150,12 +140,46 @@ function withIn(a){
         return false;
     }
 }
-
 //Returnerer true for værdier mellem 90 og 110 og værdier mellem 190 og 210
 console.log("Er tallet 10 større eller mindre end 100?: " + withIn(190));
 
 
 
+//løsning 2 - simons løsning med type 2 if-statement
+function tjek(a){
+    return tjekDiff(100 - a) || tjekDiff(200 - a);
+}
+function tjekDiff(a){
+    if(-10 <= a && a <= 10)
+        return true;
+
+    return false
+}
+
+//console.log(tjek());
 
 
-//Opgave 5 - 
+
+
+//Opgave 5 - returner true hvis tallet går op i 3 eller 7
+var result = [];
+var arr = [3, 12, 14, 37];
+
+for(var i = 0; i < arr.length; i++){
+    if(arr[i] % 3 === 0 || arr[i] % 7 === 0){
+        result.push(1);
+    }else{
+        result.push(0);
+    }
+}
+console.log(result);
+
+//løsning 2 - kortere løsning, fylder meget i consol, loggen kommenteret ud
+function check2(a){
+    return (a % 3) === 0 || (a % 7) === 0;
+}
+for(let i = 0; i < 30; i++){
+    //logger tallene op til 29, returnerer true, hvis tallene går op i 3 eller 7
+    //console.log(i, check2(i));
+}
+    
