@@ -174,12 +174,67 @@ for(var i = 0; i < arr.length; i++){
 }
 console.log(result);
 
-//løsning 2 - kortere løsning, fylder meget i consol, loggen kommenteret ud
+//løsning 2 - kortere løsning
+
+arr4 = [];
 function check2(a){
     return (a % 3) === 0 || (a % 7) === 0;
 }
 for(let i = 0; i < 30; i++){
     //logger tallene op til 29, returnerer true, hvis tallene går op i 3 eller 7
     //console.log(i, check2(i));
+    arr4.push(check2(i));
 }
-    
+console.log(arr4);
+
+
+
+//Opgave 6 - tjek on en given temperatur er under 0 og den anden er over 100
+
+arr5 = [];
+function tjekkerino(temp1, temp2){
+    return (temp1 < 0 && temp2 > 100) || (temp2 < 0 && temp1 > 100);
+}
+
+for (let i = -100; i < 200; i += 50){
+    for(let j = -100; j < 200; j += 50){
+        //console.log("opg 6: " + i, j, tjekkerino(i, j));
+        arr5.push(tjekkerino(i, j));
+        
+    }
+}
+console.log(arr5);
+
+
+//Opgave 7 - tjek om nogen af 2 integers er mellem 100 og 200, begge inklusiv
+arr6 = [];
+function check3(a, b){
+    return (100 <= a && a <= 200) || (100 <= b && b <= 200);
+}
+
+for(let i = 0; i < 300; i+= 60){
+    for(let j = 0; j < 300; j += 60){
+        //console.log(i, j, check3(i, j));
+        arr6.push(check3(i, j));
+    }
+}
+console.log(arr6);
+
+
+
+
+//Opgave 8 - true hvis et eller flere af 3 tal er mellem 20 og 50, false hvis ikke
+arr7 = [];
+function check4(a, b, c){
+    return (20 < a && a < 50) || (20 < b && b < 50) || (20 < c && c < 50);
+}
+
+for(let i = 0; i < 70; i += 15){
+    for(let j = 0; j < 70; j += 15){
+        for(let k = 0; k < 70; k += 15){
+            //console.log(i, j, k, check4(i, j, k));
+            arr6.push(check4(i, j, k));
+        }
+    }
+}
+console.log(arr6);
