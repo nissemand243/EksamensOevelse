@@ -125,7 +125,7 @@ if(arr5[0]>=20 && arr5[0] <=30 && arr5[1] >=20 && arr5[1] <=30){
 }*/
 
 
-//Opgave 3
+//Opgave 3 - returner true hvis summen eller et af integersne er 30
 function check(a, b){
     var sum = a + b;
 
@@ -139,4 +139,23 @@ console.log(check(5, 25));
 
 
 
-//Opgave 4
+//Opgave 4 - returner true hvis den givne integer er 10 større eller mindre end enten 100 eller 200
+
+function withIn(a){
+    var diff = 100 - a;
+    var diff2 = 200 - a;
+    if(diff <=10 && diff >=-10 || diff2 <= 10 && diff2 >= -10){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+//Returnerer true for værdier mellem 90 og 110 og værdier mellem 190 og 210
+console.log("Er tallet 10 større eller mindre end 100?: " + withIn(190));
+
+
+
+
+
+//Opgave 5 - 
