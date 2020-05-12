@@ -25,6 +25,10 @@ for (x = 1; x<=6; x++){
 */
 
 
+// Opgaverne findes på linket herunder:
+// https://www.w3resource.com/c-programming-exercises/basic-algo/index.php
+
+
 //Opgave 12 - pæn løsning
 
 function test(x, y){
@@ -222,7 +226,6 @@ console.log(arr6);
 
 
 
-
 //Opgave 8 - true hvis et eller flere af 3 tal er mellem 20 og 50, false hvis ikke
 arr7 = [];
 function check4(a, b, c){
@@ -237,8 +240,7 @@ for(let i = 0; i < 70; i += 15){
         }
     }
 }
-console.log(arr6);
-
+console.log(arr7);
 
 
 //Opgave 10 - fint nærmeste nummer til værdien 100, er de ens returner 0
@@ -273,3 +275,76 @@ for(let i = 0; i < 200; i+= 40){
     }
 }
 console.log(arr8);
+
+
+
+//Opgave 11
+
+arr9 = [];
+function check6(a, b){
+    if(a >= 40 && a <= 50 || b >= 40 && b <= 50){
+        return true;
+    }else if(a >= 50 && a <= 60 && b >= 50 && b <=60){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+for(let i = 30; i < 70; i += 5){
+    for(let j = 30; j < 70; j += 5){
+        arr9.push(check6(i,j));
+    }
+}
+console.log(arr9);
+
+
+//Opgave 13
+arr10 = [];
+function check7(a, b){
+    return (a % 10) == (b % 10);
+}
+
+for(let i = 0; i < 150; i += 27){
+    for(let j = 0; j < 150; j += 22){
+        arr10.push(check7(i, j));
+    }
+}
+console.log(arr10);
+
+
+//Opgave 18
+arr11 = [];
+function check8(a, b){
+    return a === 5 || b === 5 || (a + b) === 5 || (a - b) === 5;
+}
+
+for(let i = 0; i < 25; i +=5){
+    for(let j = 0; j < 25; j += 5){
+        arr11.push(check8(i, j));
+    }
+}console.log(arr11);
+
+
+//Opgave 19
+arr12 = [];
+function check9(a){
+    return (a % 13) === 0 || (a % 13) === 1;
+}
+
+for(let i = 0; i < 50; i += 3){
+    arr12.push(check9(i));
+}
+console.log(arr12);
+
+
+//Opgave 21
+arr13 = [];
+function check10(a){
+    return (a % 10) === 2;
+}
+
+for(let i = 0; i < 50; i += 5){
+    arr13.push(check10(i));
+}
+console.log(arr13);
