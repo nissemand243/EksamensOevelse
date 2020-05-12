@@ -348,3 +348,19 @@ for(let i = 0; i < 50; i += 2){
     arr13.push(check10(i));
 }
 console.log(arr13);
+
+//Opgave 23
+arr14 = [];
+function check11(a, b, c){
+    return a == (b + c) || b == (a + c) || c == (a + b);
+}
+
+for(let i = 0; i < 50; i += 20){
+    for(let j = 0; j < 50; j += 15){
+        for(let k = 0; k < 50; k += 15){
+            arr14.push(check11(i, j, k));
+        }
+    }
+}
+console.log(arr14);
+
