@@ -341,10 +341,10 @@ console.log(arr12);
 //Opgave 21
 arr13 = [];
 function check10(a){
-    return (a % 10) === 2;
+    return (a % 10) == 2;
 }
 
-for(let i = 0; i < 50; i += 5){
+for(let i = 0; i < 50; i += 2){
     arr13.push(check10(i));
 }
 console.log(arr13);
